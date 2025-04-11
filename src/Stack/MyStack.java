@@ -14,17 +14,17 @@ public class MyStack {
         this.data = new int[size];
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return size == 0;
     }
 
 
-    public boolean isFull(){
+    public boolean isFull() {
         return size == DEFAULT_SIZE;
     }
 
-    public void push(int val){
-        if (isFull()){
+    public void push(int val) {
+        if (isFull()) {
             System.out.println("Stack is full !!!");
             return;
         }
@@ -33,28 +33,28 @@ public class MyStack {
         size++;
     }
 
-    public int pop() throws MyException{
-        if (isEmpty()){
-            throw new MyException("Stack is empty");
+    public int pop() throws MyException {
+        if (isEmpty()) {
+            throw new MyException("Stack is empty ! cannot pop element from an empty stack");
         }
         ptr--;
         size--;
-        return data[ptr+1];
+        return data[ptr + 1];
     }
 
-    public void display(){
+    public void display() {
         System.out.print("[");
-        for (int i = 0 ; i <  size;i++){
+        for (int i = 0; i < size; i++) {
             System.out.print(data[i]);
-            if (i < size-1){
+            if (i < size - 1) {
                 System.out.print(", ");
             }
         }
         System.out.println("]");
     }
 
-    public int top() throws MyException{
-        if (isEmpty()){
+    public int top() throws MyException {
+        if (isEmpty()) {
             throw new MyException("Stack is Empty !!!");
         }
         return data[ptr];

@@ -1,22 +1,24 @@
 package Stack;
 
-
-
 public class Main {
     public static void main(String[] args) throws MyException {
         MyStack stack = new MyStack();
 
-        stack.push(45);
-        stack.push(63);
-        stack.push(12);
-        stack.push(78);
-        stack.push(55);
-        stack.push(100);
+//        stack.push(45);
+//        stack.push(35);
+//        stack.push(23);
+//        stack.push(312);
+//        stack.push(351);
+//        stack.push(3522);
+//        stack.push(315);
+//        stack.push(645);
+//        stack.push(2345);
+//        stack.push(2315);
+//        stack.push(10);
+
+        stack.pop();
+
+
         stack.display();
-        System.out.println("size : " + stack.size);
-        System.out.println("top element : " + stack.top());
-        System.out.println("Popped element : " + stack.pop());
-        stack.display();
-        System.out.println(stack.isEmpty());
     }
 }

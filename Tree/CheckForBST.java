@@ -1,4 +1,0 @@
-package Tree;
-
-class CheckForBST{
-}

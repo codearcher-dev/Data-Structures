@@ -1,9 +1,17 @@
+class Parent{
+    public void display(){
+        System.out.println("I am Parent");
+    }
+}
+class Child extends Parent{
+    public void show(){
+        System.out.println("I am Child");
+    }
+}
+
 public class Main{
     public static void main(String[] args) {
-        int n = 10;
-        for(int i = 0 ;i < n ;i++){
-            int count = n-i;
-            System.out.print('*');
-        }
+        Child obj = new Child();
+        obj.show();
     }
 }

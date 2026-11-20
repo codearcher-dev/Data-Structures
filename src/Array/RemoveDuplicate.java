@@ -23,6 +23,21 @@ public class RemoveDuplicate {
         return array;
     }
 
+    //If Array is Sorted
+    public int removeInPlace(int[] arr) {
+        if(arr.length == 1) return arr.length;
+        int slow = 0;
+
+        for (int fast = 1; fast < arr.length; fast++) {
+            if (arr[fast] != arr[slow]) {
+                slow++;
+                arr[slow] = arr[fast];
+            }
+        }
+
+        return slow + 1;
+    }
+
     public static void main(String[] args) {
         int[] arr = {4,5,6,7,7,8,8,9,9,10};
         int[] result = remove(arr);

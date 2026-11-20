@@ -1,5 +1,5 @@
-package Array;
-import java.util.*;
+package Sorting;
+
 public class QuickSort {
     static void partition(int[] arr){
         int pivot = arr[arr.length-1];
